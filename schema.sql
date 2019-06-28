@@ -9,3 +9,4 @@ CREATE TABLE `thoughts` (
 
   PRIMARY KEY ( `id` ) 
 );
+
