@@ -15,9 +15,9 @@ module.exports = function(app) {
         console.log("thoughts");
         console.log(req.body);
 
-        let dbQuery = "INSERT INTO thoughts (author, body, created_at) VALUES(?,?,?)";
+        let dbQuery = "INSERT INTO thoughts (author, body) VALUES(?,?)";
 
-        connection.query(dbQuery, [req.body, req.author, req.created_at], function(err, result) {
+        connection.query(dbQuery, [req.body, req.author], function(err, result) {
             if(err) throw err;
             console.log("Thoughts saved");
             res.end();
